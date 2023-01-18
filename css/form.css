@@ -1,0 +1,64 @@
+.footer {
+    color: rgb(255, 255, 255);
+    font-family: 'Island Moments', cursive;
+    text-align: center;
+    background-color: rgb(82, 120, 120);
+    max-width: 700px;
+    margin: auto;
+}
+
+.form__labelText {
+    width: 150px;
+    display: inline-block;
+    margin-right: 10px;
+    width: 100%;
+    max-width: 100px;
+}
+
+.form__field {
+   border: 1px solid rgb(188, 196, 196);
+   padding: 10px; 
+   width: 100%;
+   max-width: 100px;
+   background-color: rgb(126, 173, 173);
+}
+
+.form__field:invalid {
+    background-color: rgb(168, 100, 100);
+}
+
+.form__button {
+    border: none;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    max-width: 200px;
+    width: 100%;
+}
+
+.form__button:hover {
+    background-color: rgb(2, 138, 138);
+}
+
+.form__legend {
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+html {
+    box-sizing: border-box
+}
+
+*,
+::before {
+    box-sizing: inherit;
+}
