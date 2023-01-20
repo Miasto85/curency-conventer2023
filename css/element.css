@@ -1,0 +1,9 @@
+.element {
+    width: 600px;
+    height: 600px;
+    background-image: url("../images/bag.png");
+    resize: both;
+    overflow: auto;
+    background-size: cover;
+
+}
