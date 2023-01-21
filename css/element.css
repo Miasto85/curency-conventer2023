@@ -1,7 +1,7 @@
 .element {
     width: 500px;
     height: 400px;
-    background-image: url("../images/bag.png");
+    background-image: url("../images/back.png");
     resize: both;
     overflow: auto;
     background-size: cover;
