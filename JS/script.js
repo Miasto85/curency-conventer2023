@@ -1,44 +1,42 @@
-let amountElement = document.querySelector(".js-PLN");
-let toElement = document.querySelector(".js-toAmount");
-let formElement = document.querySelector(".js-form");
-let resultElement = document.querySelector(".js-result");
-let exchangeRateElement = document.querySelector(".js-exchangeRate");
+{
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
 
+        formElement.addEventListener("submit", (even) => {
+            even.preventDefault();
 
-let euro = 4.72;
-let gbp = 5.28;
-let usd = 4.64;
+            const amountElement = document.querySelector(".js-PLN");
 
+            const toElement = document.querySelector(".js-toAmount");
 
-amountElement.addEventListener("input", () => {
-    console.log('kwota została zmieniona.');
-});
+            const resultElement = document.querySelector(".js-result");
+            const amount = amountElement.value;
+            const to = toElement.value;
 
-formElement.addEventListener("reset", () => {
-    console.log('kwota została zmieniona.');
-});
+            const result = calculateResult(amount, to);
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+            resultElement.innerText = result.toFixed(2);
+        });
+    };
+    
+    init();
 
-    let amount = amountElement.value;
-    let to = toElement.value;
+    const calculateResult = (amount, to) => {
+        const euro = 4.72;
+        const gbp = 5.28;
+        const usd = 4.64;
 
-    switch (to) {
-        
-        case "euro":
-            result = amount / euro;
-            exchangeRateElement.innerText = euro;
-            break;
-        case "gbp":
-            result = amount / gbp;
-            exchangeRateElement.innerText = gbp;
-            break;
-        case "usd":
-            result = amount / usd;
-            exchangeRateElement.innerText = usd;
-            break;
-    }
-    console.log(amount, to);
-    resultElement.innerText = result.toFixed(2);
-});
+        switch (to) {
+            
+            case "euro":
+                return amount / euro;
+                    
+            case "gbp":
+                return amount / gbp;
+                           
+            case "usd":
+                return amount / usd;     
+        }
+
+    };
+}
