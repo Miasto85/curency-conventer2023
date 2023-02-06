@@ -5,5 +5,5 @@
     resize: both;
     overflow: auto;
     background-size: cover;
-
-}
+    background-attachment: fixed;
+}   
